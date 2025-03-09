@@ -6,9 +6,11 @@ import { Box, Typography } from "@mui/material";
 import { BaseCard } from "../components/TripCard";
 import { NavigationBar } from "../components/NavigationBar";
 
-export default function TripDashboard() {
+const TripDashboard = () => {
   const searchParams = useSearchParams();
-  const userId = searchParams.get("userID"); // Extract userID from URL
+  console.log("Search Params:", searchParams); // Log the searchParams to see if userID exists
+  const userId = searchParams.get("userId"); // Extract userID from URL
+  console.log("User ID:", userId); // Log userId to see if it's extracted correctly
   const [trips, setTrips] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -69,3 +71,5 @@ export default function TripDashboard() {
     </>
   );
 };
+
+export default TripDashboard;

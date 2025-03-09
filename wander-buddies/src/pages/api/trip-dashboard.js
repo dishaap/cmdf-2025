@@ -14,7 +14,7 @@ export default async function handler(req, res) {
 
     try {
         const result = await pool.query(`
-            SELECT t.*
+            SELECT *
             FROM Trip t
             JOIN UseronTrip ut ON t.tripid = ut.tripid
             WHERE ut.usergoing = $1
