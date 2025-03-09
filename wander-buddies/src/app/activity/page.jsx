@@ -124,4 +124,15 @@ const Activity = () => {
 
 }
 
+export async function getServerSideProps() {
+  const response = await fetch('${process.env.NEXT_PUBLIC_BASE_URL || }api/activities'); // Adjust API URL if needed
+  const data = await response.json();
+  
+  return {
+    props: {
+      activities: data.activities || [], // Pass the fetched activities as props
+    },
+  };
+}
+
 export default Activity;
