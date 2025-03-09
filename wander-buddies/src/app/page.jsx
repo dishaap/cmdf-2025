@@ -55,15 +55,23 @@ const Footer = () => {
 
 
 const Home = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  // const [modalOpen, setModalOpen] = useState(false);
 
-  const handleOpenModal = () => {
-    setModalOpen(true);
-  };
+  // const handleOpenCreateModal = () => {
+  //   setModalOpen(true);
+  // };
 
-  const handleCloseModal = () => {
-    setModalOpen(false);
-  };
+  // const handleCloseCreateModal = () => {
+  //   setModalOpen(false);
+  // };
+
+  // const handleOpenEditModal = () => {
+  //   setModalOpen(true);
+  // };
+
+  // const handleCloseEditModal = () => {
+  //   setModalOpen(false);
+  // };
 
   return (
     <Box sx={{
@@ -95,14 +103,14 @@ const Home = () => {
           </Typography>
           
           {/* TO REMOVE - ONLY TEST */}
-          <Button variant="contained" onClick={handleOpenModal}>
+          {/* <Button variant="contained" onClick={handleOpenCreateModal}>
             Create Activity
           </Button>
-          <CreateActivityModal open={modalOpen} onClose={handleCloseModal} />
-          <Button variant="contained" onClick={handleOpenModal}>
+          <CreateActivityModal open={modalOpen} onClose={handleCloseCreateModal} />
+          <Button variant="contained" onClick={handleOpenEditModal}>
             Edit Activity
           </Button>
-          <EditActivityModal open={modalOpen} onClose={handleCloseModal} />
+          <EditActivityModal open={modalOpen} onClose={handleCloseEditModal} /> */}
 
         </Box>
         <AuthTabs />

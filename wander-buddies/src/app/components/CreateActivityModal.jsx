@@ -28,11 +28,11 @@ const CreateActivityModal = ({ open, onClose }) => {
           boxShadow: 24,
           p: 3,
           borderRadius: 2,
-          width: 400,
+          width: "80%",
         }}
       >
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-          <Typography sx={{color: "#96B74C", fontFamily: "var(--font-poppins)", fontWeight: 500, fontSize: "1.5rem", paddingLeft: "6vw"}}>Create Activity</Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Typography sx={{ color: "#96B74C", fontFamily: "var(--font-poppins)", fontWeight: 500, fontSize: "1.5rem"}}>Create Activity</Typography>
           <IconButton onClick={onClose}>
             <CloseIcon />
           </IconButton>
@@ -46,42 +46,44 @@ const CreateActivityModal = ({ open, onClose }) => {
           onChange={(e) => setActivityName(e.target.value)}
         />
 
-        {/* Activity Type */}
-        <FormControl fullWidth margin="normal">
-          <InputLabel>Activity Type</InputLabel>
-          <Select
-            value={activityType}
-            onChange={(e) => setActivityType(e.target.value)}
-            label="Activity Type"
-          >
-            <MenuItem value="Food">Food</MenuItem>
-            <MenuItem value="Transit">Transit</MenuItem>
-            <MenuItem value="Art">Art</MenuItem>
-            <MenuItem value="History">History</MenuItem>
-            <MenuItem value="Shopping">Shopping</MenuItem>
-            <MenuItem value="Entertainment">Entertainment</MenuItem>
-            <MenuItem value="Nature">Nature</MenuItem>
-          </Select>
-        </FormControl>
+        <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'start', alignItems: 'center', gap: "0.5vw"}}>
+          {/* Activity Type */}
+          <FormControl fullWidth margin="normal">
+            <InputLabel>Activity Type</InputLabel>
+            <Select
+              value={activityType}
+              onChange={(e) => setActivityType(e.target.value)}
+              label="Activity Type"
+            >
+              <MenuItem value="Food">Food</MenuItem>
+              <MenuItem value="Transit">Transit</MenuItem>
+              <MenuItem value="Art">Art</MenuItem>
+              <MenuItem value="History">History</MenuItem>
+              <MenuItem value="Shopping">Shopping</MenuItem>
+              <MenuItem value="Entertainment">Entertainment</MenuItem>
+              <MenuItem value="Nature">Nature</MenuItem>
+            </Select>
+          </FormControl>
 
-        {/* Activity Date */}
-        <TextField
-        //   label="Activity Date"
-          type="date"
-          fullWidth
-          margin="normal"
-          value={activityDate}
-          onChange={(e) => setActivityDate(e.target.value)}
-        />
+          {/* Activity Date */}
+          <TextField
+            //   label="Activity Date"
+            type="date"
+            fullWidth
+            margin="normal"
+            value={activityDate}
+            onChange={(e) => setActivityDate(e.target.value)}
+          />
 
-        {/* Activity Budget */}
-        <TextField
-          label="Activity Budget"
-          fullWidth
-          margin="normal"
-          value={activityBudget}
-          onChange={(e) => setActivityBudget(e.target.value)}
-        />
+          {/* Activity Budget */}
+          <TextField
+            label="Activity Budget"
+            fullWidth
+            margin="normal"
+            value={activityBudget}
+            onChange={(e) => setActivityBudget(e.target.value)}
+          />
+        </Box>
 
         {/* Activity Address */}
         <TextField
@@ -104,7 +106,7 @@ const CreateActivityModal = ({ open, onClose }) => {
         <Button
           variant="contained"
           fullWidth
-          sx={{ mt: 2, backgroundColor: "#96B74C", fontFamily: "var(--font-poppins)", fontWeight: 500, fontSize: "0.8rem"}}
+          sx={{ mt: 2, backgroundColor: "#96B74C", fontFamily: "var(--font-poppins)", fontWeight: 500, fontSize: "0.8rem" }}
           onClick={handleSubmit}
         >
           Create Activity
