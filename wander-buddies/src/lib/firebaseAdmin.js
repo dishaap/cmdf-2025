@@ -1,16 +1,14 @@
-import admin from "firebase-admin";
+const admin = require("firebase-admin");
+const fs = require("fs");
+
+const serviceAccount = JSON.parse(
+  fs.readFileSync(process.env.FIREBASE_ADMIN_KEY_PATH, "utf8")
+);
 
 if (!admin.apps.length) {
   admin.initializeApp({
-    credential: admin.credential.cert(JSON.parse(process.env.FIREBASE_ADMIN_KEY)),
+    credential: admin.credential.cert(serviceAccount),
   });
 }
 
-export const verifyIdToken = async (token) => {
-  try {
-    return await admin.auth().verifyIdToken(token);
-  } catch (error) {
-    console.log("Error in Authentication");
-    return null;
-  }
-};
+module.exports = admin;

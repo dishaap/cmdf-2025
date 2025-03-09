@@ -7,7 +7,7 @@ import { StyledAvatar } from './StyledAvatar';
 const people = ["Alyssa", "Jamie", "Jennifer", "Sally"];
 
 // used for each trip 
-export const BaseCard = ({tripName}) => {
+export const BaseCard = ({key, tripName}) => {
     return(
     <Card variant="outlined" sx={{borderRadius: "10px"}}>
         <CardMedia
