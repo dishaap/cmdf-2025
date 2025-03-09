@@ -1,31 +1,23 @@
-"use client";
+"use client side";
 
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import { Poppins } from "next/font/google"; // Import Poppins font
-
-// Load Poppins font from Google Fonts
-const poppins = Poppins({
-  weight: ['400', '700'],  // Use Regular and Bold weights
-  subsets: ['latin'],
-});
-
+import AuthTabs from "./components/AuthTabs";
 
 const Header = () => {
   return (
-    <Box sx={{ display: "flex", alignItems: "center", gap: "2vw",
-      width: "100%", backgroundColor: "#098EAC", padding: "1vw 2vw" }}>
-      {/* Logo Image */}
-      <Image 
-        src="/images/logo-white.svg" 
+    <Box sx={{
+      display: "flex", alignItems: "center", gap: "2vw",
+      width: "100%", backgroundColor: "#098EAC", padding: "1vw 2vw"
+    }}>
+      <Image
+        src="/images/logo-white.svg"
         alt="Logo"
-        width={50} 
-        height={50} 
+        width={50}
+        height={50}
       />
-
-      {/* Title */}
-      <Typography sx={{ fontFamily: poppins.style.fontFamily, fontWeight: 600, fontSize: "2.3rem", color: "white" }}>
+      <Typography sx={{ fontFamily: "var(--font-poppins)", fontWeight: 600, fontSize: "2.3rem", color: "white" }}>
         Wander Buddies
       </Typography>
     </Box>
@@ -35,11 +27,24 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "start", gap: "2vw",
-      width: "100%", backgroundColor: "#098EAC", padding: "10px 20px" }}>
-      {/* Title */}
-      <Typography sx={{ fontFamily: poppins.style.fontFamily, fontWeight: 500, fontSize: "1.5rem", color: "white" }}>
-        Wander Buddies
+    <Box sx={{
+      display: "flex", flexDirection: "column", alignItems: "start", gap: "1vh",
+      width: "100%", backgroundColor: "#098EAC", padding: "1vw 2vw"
+    }}>
+      <Box sx={{ display: "flex", flexDirection: "row", alignItems: "start", gap: "2vw" }}>
+        <Typography sx={{ fontFamily: "var(--font-quicksand)", fontWeight: 500, fontSize: "1rem", color: "white" }}>
+          About Wander Buddies
+        </Typography>
+        <Typography sx={{ fontFamily: "var(--font-quicksand)", fontWeight: 500, fontSize: "1rem", color: "white" }}>
+          Contact Us
+        </Typography>
+        <Typography sx={{ fontFamily: "var(--font-quicksand)", fontWeight: 500, fontSize: "1rem", color: "white" }}>
+          Terms and Conditions
+        </Typography>
+      </Box>
+      <hr style={{ border: "0.5px solid white", width: "97.5%" }} />
+      <Typography sx={{ fontFamily: "var(--font-poppins)", fontWeight: 500, fontSize: "0.8rem", color: "white", paddingLeft: "1vw" }}>
+        © Wander Buddies 2025
       </Typography>
     </Box>
 
@@ -49,9 +54,36 @@ const Footer = () => {
 
 const Home = () => {
   return (
-    <Box sx={{ display: "flex", flexDirection: "column" }}>
+    <Box sx={{
+      display: "flex", flexDirection: "column", backgroundImage: 'url("/images/wanderbuddiesbg.svg")',
+      backgroundSize: "fill"
+    }}>
       <Header />
-      <br />
+      <Box sx={{ display: "flex", flexDirection: "row", width: "100%", height: "665px", alignItems: "center", padding: "1vw" }}>
+        <Box sx={{
+          display: "flex", flexDirection: "column", alignItems: "center", gap: "1vw", justifyContent: "center",
+          paddingLeft: "2.5vw", paddingRight: "3vw", marginLeft: "2vw"
+        }}>
+          <Typography sx={{ fontFamily: "var(--font-poppins)", fontWeight: 600, fontSize: "2.3rem", color: "black" }}>
+            Welcome!
+          </Typography>
+          <Typography sx={{
+            fontFamily: "var(--font-poppins)", fontWeight: 300, fontSize: "1.5rem", color: "black",
+            fontStyle: "italic"
+          }}>
+            Explore more, plan together, and make
+            <br />
+            every journey unforgettable —
+            <br />
+            track your budget, vote on activities,
+            <br />
+            and travel with ease.
+            <br />
+            Adventure starts here!
+          </Typography>
+        </Box>
+        <AuthTabs />
+      </Box>
       <Footer />
     </Box>
   );
