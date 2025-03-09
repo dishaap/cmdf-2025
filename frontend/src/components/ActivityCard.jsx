@@ -52,7 +52,7 @@ export const ActivityCard = ({sizeLarge = true}) => {
              </CardActions>
       </CardContent>
     </Card> : 
-    <Card variant="outlined" sx={{borderRadius: "10px", width: "300px", background:"#64A181"}}>
+    <Card variant="outlined" sx={{borderRadius: "10px", width: "100%", background:"#64A181"}}>
         <CardContent sx={{display: "grid", gridTemplateColumns: "0.5fr 2fr 1fr", textAlign: "left", alignItems: "center"}}>
                 <Box sx={{display:"flex", justifyContent: "center", textAlign: "center" }}>
                     <Typography sx={{ color: 'text.primary', fontSize: 20 }}>
