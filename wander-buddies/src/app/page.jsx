@@ -1,9 +1,11 @@
-"use client side";
+"use client";
 
-import React from "react";
-import { Box, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Typography, Button } from "@mui/material";
 import Image from "next/image";
 import AuthTabs from "./components/AuthTabs";
+import CreateActivityModal from './components/CreateActivityModal';
+import EditActivityModal from './components/EditActivityModal';
 
 const Header = () => {
   return (
@@ -53,6 +55,16 @@ const Footer = () => {
 
 
 const Home = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <Box sx={{
       display: "flex", flexDirection: "column", backgroundImage: 'url("/images/wanderbuddiesbg.svg")',
@@ -81,6 +93,17 @@ const Home = () => {
             <br />
             Adventure starts here!
           </Typography>
+          
+          {/* TO REMOVE - ONLY TEST */}
+          <Button variant="contained" onClick={handleOpenModal}>
+            Create Activity
+          </Button>
+          <CreateActivityModal open={modalOpen} onClose={handleCloseModal} />
+          <Button variant="contained" onClick={handleOpenModal}>
+            Edit Activity
+          </Button>
+          <EditActivityModal open={modalOpen} onClose={handleCloseModal} />
+
         </Box>
         <AuthTabs />
       </Box>
