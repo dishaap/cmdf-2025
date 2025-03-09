@@ -1,3 +1,4 @@
+
 "use client";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -46,6 +47,7 @@ export default function TripDashboard() {
     <>
       <Box>
         <Typography sx={{ color: "text.primary", fontSize: 44, marginBottom: 6 }}>
+
           My Trips
         </Typography>
       </Box>
@@ -57,6 +59,7 @@ export default function TripDashboard() {
           alignContent: "flex-start",
         }}
       >
+
         {trips.map((trip, index) => {
           return (
             <BaseCard

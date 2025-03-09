@@ -1,0 +1,141 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+.headerText {
+    /* Title */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 40px;
+    color: #323544;
+}
+
+.dateText {
+    /* Heading */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.labelText {
+    /* Subtitle */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+
+    color: #323544;
+
+
+}
+
+.backButton {
+    /* Button 2 */
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-decoration-line: underline;
+
+    color: #000000;
+
+
+}
+
+.addButton {
+
+
+    background: #098EAC;
+    text-transform: none;
+    border-radius: 30px;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 31px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.addButton:hover {
+    background-color: #094B59;
+}
+
+.budgetLabel {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+
+    color: #323544;
+
+
+}
+
+.editButton {
+
+
+    background: #D9D9D9;
+    text-transform: none;
+    border-radius: 30px;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #323544;
+    height: 2rem;
+}
+
+
+.budget {
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 25px;
+line-height: 38px;
+display: flex;
+align-items: center;
+
+color: #323544;
+
+
+}
+
+/* ProgressBar.css */
+.myProgressBar {
+    /* Set a custom height for the progress bar */
+    height: 30px;
+    background-color: #82B9D9;
+    border-radius: 15px;
+  }
+  
+  /* Override the inner bar's color by targeting Material-UI's generated class */
+  .myProgressBar .MuiLinearProgress-bar {
+    background-color: #098EAC; /* Replace with your desired color */
+    border-radius: 15px;
+
+  }
