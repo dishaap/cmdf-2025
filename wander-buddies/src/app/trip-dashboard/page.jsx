@@ -16,7 +16,7 @@ const tripNames = [
   "Cultural Journey",
 ];
 
-export const TripDashboard = () => {
+const TripDashboard = () => {
   return (
     <>
       {" "}
@@ -42,3 +42,5 @@ export const TripDashboard = () => {
     </>
   );
 };
+
+export default TripDashboard;
