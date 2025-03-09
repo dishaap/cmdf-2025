@@ -7,23 +7,18 @@ import { StyledAvatar } from './StyledAvatar';
 const people = ["Alyssa", "Jamie", "Jennifer", "Sally"];
 
 // used for each trip 
-export const BaseCard = ({key, tripName}) => {
+export const TripCard = ({tripName}) => {
     return(
-    <Card variant="outlined" sx={{borderRadius: "10px"}}>
+    <Card variant="outlined" sx={{borderRadius: "20px"}}>
         <CardMedia
-            sx={{ height: 140, width: 300}}
-            image="/public/images/tropical.jpg"
+            sx={{ height: "200px", width: "100%"}}
+            image="/images/tripImages/seychelles.jpg"
             title="tropical"
         />
 
         <CardContent sx={{textAlign: "left"}}>
-            {/* <Box sx = {{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-                <Typography gutterBottom sx={{ color: 'primary.secondary', fontSize: 14 }}>
-                    Budget
-                </Typography>
-            </Box> */}
             
-            <Typography gutterBottom sx={{ color: 'text.primary', fontSize: 20 }}>
+            <Typography sx={{ color: 'text.primary', fontSize: 20 }}>
                  {tripName}
             </Typography>
             <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}>
