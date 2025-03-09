@@ -16,6 +16,7 @@ export const NavigationBar = () => {
             width: 100, 
             height: "100vh",
             gap: 10,
+            backgroundColor: "#098EAC",
             left: 0,}}>
             <Box sx={{display: "flex", flexDirection: "column", alignItems: "center", gap: 6, marginTop: 10}}>
                 <StyledAvatar displayName={false} />

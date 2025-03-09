@@ -1,7 +1,8 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { BaseCard } from "../components/TripCard";
+import { TripCard } from "../components/TripCard";
 import { NavigationBar } from "../components/NavigationBar";
+import { AddButton } from "../components/AddButton";
 
 const tripNames = [
   "Tropical Getaway",
@@ -19,13 +20,19 @@ const tripNames = [
 export const TripDashboard = () => {
   return (
     <>
-      {" "}
-      <Box>
-        <Typography
-          sx={{ color: "text.primary", fontSize: 44, marginBottom: 6 }}
-        >
-          My Trips
-        </Typography>
+      <NavigationBar />
+      <Box sx={{display: "flex", flexDirection: "row", justifyContent: "space-between", marginBottom: 6}}>
+        <Box sx={{display: "flex", flexDirection: "row", gap: 4}}>
+          <Box component="img" src="/images/icons/wander-buddies.png" alt="Logo" />
+          <Typography
+            sx={{ color: "text.primary", fontSize: 44, }}
+          >
+            My Trips
+          </Typography>
+
+        </Box>
+        
+        <AddButton />
       </Box>
       <Box
         sx={{
@@ -36,9 +43,11 @@ export const TripDashboard = () => {
         }}
       >
         {tripNames.map((tripName) => {
-          return <BaseCard tripName={tripName} />;
+          return <TripCard key={tripName} tripName={tripName} />;
         })}
       </Box>
     </>
   );
 };
+
+export default TripDashboard;
